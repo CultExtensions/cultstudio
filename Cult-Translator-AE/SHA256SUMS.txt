@@ -1,0 +1,9 @@
+SHA-256 checksums (macOS `shasum -a 256`)
+
+34685eae7538f9c3eabe88dd6a07cc4cc9d4d63f66b554bd8f011eedb9246ba5  Cult Translator.jsxbin
+ddefcb68a1a87c05f06448dfd91e9e64de067310c4e700c780cf3315d96195a3  README.html
+0065dcf0eb80350ec637ffe18073d4f53cf515b5fed590ede5b30daaab9c1c41  INSTALL.txt
+dd98e54fdc5e7959df4d7ba26abd0dfa639fa38b0cccbbfc83787ce78234d642  Open Documentation.command
+d0541ac201012e9fdf9aceb17b8c949e66d55dcc63d04008cdee7436c1506973  cult-logo.svg
+7018e318d556c62e2ea193cbc2a1126d780d806d6495c92ed49dd8c66694d35c  INSTALLATION-NOTES.txt
+

@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------
+Bundle version 1.0.0 · Built (UTC): 2026-05-04
+--------------------------------------------------------------------------------
+
+Cult Connector — Adobe After Effects ↔ Crowdin
+==============================================
+
+ScriptUI panel for After Effects: send compositions and screenshots to Crowdin,
+translate with full visual context, and import localized comps without leaving
+your timeline.
+
+This bundle is a ZIP install for macOS and Windows (copy one file into Adobe’s
+ScriptUI Panels folder). For the formatted guide with the same steps, open
+README.html in any browser.
+
+
+CONTENTS
+--------
+• Cult Connector (AE ↔ Crowdin).jsxbin  — the panel (copy into After Effects)
+• README.html                             — full guide (recommended)
+• INSTALL.txt                             — this file
+• assets/cult-logo.svg                    — logo used by README.html
+• Open Documentation.command              — macOS: opens README.html
+
+
+REQUIREMENTS
+------------
+• Adobe After Effects (a recent year build is recommended)
+• Crowdin access and a Cult Extensions account (trial available):
+  https://cultextensions.com/
+• Network permission for the panel — see “Before first launch” below
+
+
+BEFORE FIRST LAUNCH — AFTER EFFECTS SCRIPTING
+----------------------------------------------
+Most Cult Connector features need network access (Crowdin API, Cult Extensions
+auth). Without this, the panel may appear blank or fail silently.
+
+1. Open After Effects → Preferences (macOS) or Edit → Preferences (Windows) →
+   Scripting & Expressions.
+
+2. Enable “Allow Scripts to Write Files and Access Network”.
+
+3. Quit After Effects completely and reopen so the setting applies everywhere.
+
+
+INSTALL — macOS
+---------------
+1. Open After Effects.
+
+2. Go to File → Scripts → Install Script UI Panel…
+
+3. Select “Cult Connector (AE ↔ Crowdin).jsxbin”.
+
+4. Restart After Effects.
+
+5. Open Window → Cult Connector (AE ↔ Crowdin) (the menu entry matches the
+   script file name).
+
+If you install a new After Effects version later, you may need to run
+“Install Script UI Panel…” again for that version.
+
+
+INSTALL — WINDOWS
+-----------------
+1. Open After Effects.
+
+2. Go to File → Scripts → Install Script UI Panel…
+
+3. Select “Cult Connector (AE ↔ Crowdin).jsxbin”.
+
+4. Restart After Effects.
+
+5. Open Window → Cult Connector (AE ↔ Crowdin) (the menu entry matches the
+   script file name).
+
+If Windows blocks the install prompt, run After Effects as Administrator once,
+install the panel, then reopen normally.
+
+
+USING CULT CONNECTOR (QUICK)
+-----------------------------
+1. Dock the panel where you like.
+
+2. Sign in via the browser flow when prompted (stay signed in when the panel
+   expects it).
+
+3. Connect your Crowdin project (Teams or Enterprise).
+
+4. Use the Composition workflow to send strings; add markers on tricky motion
+   for exact screenshot frames.
+
+5. Import translations back when ready — typically one composition per language.
+
+
+SUPPORT
+-------
+Questions or licensing: contact@cultextensions.com
+Product site: https://cultextensions.com/

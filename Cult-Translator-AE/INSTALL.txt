@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------------
+Bundle · Built (UTC): 2026-05-05
+--------------------------------------------------------------------------------
+
+Cult Translator — Adobe After Effects (AI localization)
+=====================================================
+
+ScriptUI panel for After Effects: translate text layers in-place with context.
+
+This bundle is a ZIP install for macOS and Windows (copy one file into Adobe’s
+ScriptUI Panels folder).
+
+
+CONTENTS
+--------
+• Cult Translator.jsxbin   — the panel (copy into After Effects)
+• README.html              — full guide (recommended)
+• INSTALL.txt              — this file
+• cult-logo.svg            — logo used by README.html
+
+
+BEFORE FIRST LAUNCH — AFTER EFFECTS SCRIPTING
+---------------------------------------------
+Cult Translator needs network access (Cult Studio auth + translation proxy).
+
+1. Open After Effects → Preferences (macOS) or Edit → Preferences (Windows) →
+   Scripting & Expressions.
+
+2. Enable “Allow Scripts to Write Files and Access Network”.
+
+3. Quit After Effects completely and reopen.
+
+
+INSTALL — macOS
+---------------
+1. Open After Effects.
+
+2. Go to File → Scripts → Install Script UI Panel…
+
+3. Select “Cult Translator.jsxbin”.
+
+4. Restart After Effects.
+
+5. Open Window → Cult Translator (name matches the script file).
+
+
+INSTALL — WINDOWS
+-----------------
+1. Open After Effects.
+
+2. Go to File → Scripts → Install Script UI Panel…
+
+3. Select “Cult Translator.jsxbin”.
+
+4. Restart After Effects.
+
+5. Open Window → Cult Translator (name matches the script file).
+
+If Windows blocks the install prompt, run After Effects as Administrator once,
+install the panel, then reopen normally.
+
+
+USING CULT TRANSLATOR (QUICK)
+-----------------------------
+1. Open a composition and select one or more text layers (optional).
+2. Open the panel and click Sign in (browser).
+3. Click Translate.
+
+
+SUPPORT
+-------
+Questions or licensing: contact@cultextensions.com
+Product site: https://cultextensions.com/
+

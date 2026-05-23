@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cult Connector — Adobe After Effects ↔ Crowdin</title>
+  <style>
+    :root {
+      --ink: #0b303b;
+      --ink2: rgba(11, 48, 59, 0.78);
+      --accent: #5454d2;
+      --accent2: #6b5cff;
+      --card: rgba(255, 255, 255, 0.72);
+      --border: rgba(255, 255, 255, 0.55);
+      --shadow: 0 14px 40px rgba(11, 48, 59, 0.12);
+      --radius: 18px;
+      --maxw: 820px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Sora", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background: linear-gradient(145deg, #e8eef7 0%, #f4f0ff 42%, #eef6fb 100%);
+      line-height: 1.55;
+    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 56px; }
+    header.hero {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.5));
+      -webkit-backdrop-filter: blur(14px) saturate(1.35);
+      backdrop-filter: blur(14px) saturate(1.35);
+      box-shadow: var(--shadow), 0 1px 0 rgba(255, 255, 255, 0.85) inset;
+      padding: 26px 26px 22px;
+      margin-bottom: 22px;
+    }
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(84, 84, 210, 0.22);
+    }
+    h1 {
+      margin: 4px 0 8px;
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+    .tagline { margin: 0; color: var(--ink2); font-size: 0.98rem; max-width: 52ch; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .pill {
+      font-size: 0.78rem;
+      font-weight: 400;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(107, 92, 255, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(84, 84, 210, 0.2);
+    }
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .card {
+      border-radius: calc(var(--radius) - 4px);
+      border: 1px solid var(--border);
+      background: var(--card);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      padding: 18px 18px 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 28px rgba(11, 48, 59, 0.06);
+    }
+    .card p:first-child { margin-top: 0; }
+    .card p:last-child { margin-bottom: 0; }
+    ol.steps { margin: 8px 0 0; padding-left: 1.25rem; }
+    ol.steps li { margin: 8px 0; }
+    code, .path {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.82em;
+      background: rgba(11, 48, 59, 0.06);
+      padding: 2px 7px;
+      border-radius: 6px;
+      word-break: break-all;
+    }
+    .note {
+      font-size: 0.88rem;
+      color: var(--ink2);
+      border-left: 3px solid rgba(107, 92, 255, 0.45);
+      padding-left: 12px;
+      margin: 12px 0 0;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 400;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent2); }
+    footer {
+      margin-top: 36px;
+      font-size: 0.85rem;
+      color: var(--ink2);
+      text-align: center;
+    }
+    .bundle-meta {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink2);
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .kbd {
+      border: 1px solid rgba(11, 48, 59, 0.18);
+      border-radius: 6px;
+      padding: 1px 7px;
+      font-family: inherit;
+      font-size: 0.88em;
+      background: rgba(255, 255, 255, 0.65);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-top">
+        <img class="logo" src="assets/cult-logo.svg" width="56" height="56" alt="" />
+        <div>
+          <h1>Cult Connector</h1>
+          <p class="tagline">
+            ScriptUI panel for Adobe After Effects. Send compositions and screenshots to Crowdin, translate with full visual context, and import localized comps—without leaving your timeline.
+          </p>
+          <div class="pill-row">
+            <span class="pill">ZIP install</span>
+            <span class="pill">macOS &amp; Windows</span>
+            <span class="pill">Crowdin Teams &amp; Enterprise</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h2>Requirements</h2>
+    <div class="card">
+      <ul style="margin:0;padding-left:1.2rem;">
+        <li>Adobe After Effects (recent year build recommended)</li>
+        <li>Crowdin access and a <a href="https://cultextensions.com/">Cult Extensions</a> account (trial available)</li>
+        <li>Network permission for the panel (see After Effects scripting prefs below)</li>
+      </ul>
+    </div>
+
+    <h2>Before first launch — After Effects scripting</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Open After Effects → <strong>Preferences</strong> (macOS) or <strong>Edit → Preferences</strong> (Windows) → <strong>Scripting &amp; Expressions</strong>.</li>
+        <li>Enable <strong>Allow Scripts to Write Files and Access Network</strong>.</li>
+        <li>Quit After Effects completely and reopen so the setting applies everywhere.</li>
+      </ol>
+      <p class="note">Most Cult Connector features need network access (Crowdin API, Cult Extensions auth). Without this, the panel may appear blank or fail silently.</p>
+    </div>
+
+    <h2>Install on macOS</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Open After Effects.</li>
+        <li>Go to <strong>File</strong> → <strong>Scripts</strong> → <strong>Install Script UI Panel…</strong></li>
+        <li>Select <strong>Cult Connector (AE ↔ Crowdin).jsxbin</strong>.</li>
+        <li>Restart After Effects.</li>
+        <li>Open <span class="kbd">Window</span> → look for <strong>Cult Connector (AE ↔ Crowdin)</strong> (name matches the script).</li>
+      </ol>
+      <p class="note">If you install a new AE version later, you may need to run “Install Script UI Panel…” again for that version.</p>
+    </div>
+
+    <h2>Install on Windows</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Open After Effects.</li>
+        <li>Go to <strong>File</strong> → <strong>Scripts</strong> → <strong>Install Script UI Panel…</strong></li>
+        <li>Select <strong>Cult Connector (AE ↔ Crowdin).jsxbin</strong>.</li>
+        <li>Restart After Effects.</li>
+        <li>Open <span class="kbd">Window</span> → look for <strong>Cult Connector (AE ↔ Crowdin)</strong> (name matches the script).</li>
+      </ol>
+      <p class="note">If Windows blocks the install prompt, run After Effects as Administrator once, install the panel, then reopen normally.</p>
+    </div>
+
+    <h2>Using Cult Connector (quick)</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>Dock the panel where you like.</li>
+        <li>Sign in via the browser flow when prompted (stay signed in when the panel expects it).</li>
+        <li>Connect your Crowdin project (Teams or Enterprise).</li>
+        <li>Use the Composition workflow to send strings; add markers on tricky motion for exact screenshot frames.</li>
+        <li>Import translations back when ready—typically one composition per language.</li>
+      </ol>
+    </div>
+
+    <h2>Support</h2>
+    <div class="card">
+      <p style="margin:0;">Questions or licensing: <a href="mailto:contact@cultextensions.com">contact@cultextensions.com</a><br />
+      Product site: <a href="https://cultextensions.com/">cultextensions.com</a></p>
+    </div>
+
+    <footer>
+            <div class="bundle-meta">Bundle version 1.0.0 · Built (UTC): 2026-05-04</div>
+      Cult Extensions · Cult Connector (Adobe After Effects ↔ Crowdin)<br />
+      Documentation bundled with your download — keep this folder for your team’s reference.
+    </footer>
+  </div>
+</body>
+</html>

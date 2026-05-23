@@ -1,0 +1,8 @@
+SHA-256 checksums (macOS `shasum -a 256`)
+
+2fa882076d4758310594aab7e6ed04af32402c4a967020e1b20aa19662356d4f  Cult Connector (AE ↔ Crowdin).jsxbin
+af9a66b560bcb9263b15bbe9129a2bbc5e6f3e50c342ea987cc64f1727f1a941  README.html
+20dc91685c0ad4249ab0da807d21482f29768b90cc25606eb0e05d0680117343  INSTALL.txt
+04fd37346c4daca668a5c9e5292e039302800e1f8b7e00b04f021e7ae4981237  Open Documentation.command
+d0541ac201012e9fdf9aceb17b8c949e66d55dcc63d04008cdee7436c1506973  assets/cult-logo.svg
+

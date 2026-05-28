@@ -181,7 +181,7 @@
       <ul class="bullets">
         <li>Phrase TMS account with access to at least one project (and target languages configured).</li>
         <li>Cult Extensions license with your Phrase login email on the workspace <strong>allowlist</strong> (Cult Studio dashboard).</li>
-        <li>Phrase Registered OAuth app with redirect URI <code>https://login.cultextensions.com/integrations/phrase/oauth/callback</code> (same for all regions). The Cult server <code>PHRASE_TMS_BASE_URL</code> must match the Phrase datacenter where the account lives (EU: <code>cloud.memsource.com</code>; US: <code>us.cloud.memsource.com</code>).</li>
+        <li>Phrase <strong>Registered OAuth App</strong> (TMS → Settings → Integrations) with redirect URI <code>https://login.cultextensions.com/integrations/phrase/oauth/callback</code>. Browser login uses <code>cloud.memsource.com/web/oauth/authorize</code> (EU) or <code>us.cloud.memsource.com/web</code> (US) — not the Platform dashboard card alone.</li>
       </ul>
 
       <h3>Connect Phrase TMS</h3>
@@ -191,7 +191,8 @@
         <li>Return to After Effects — the panel shows “Connected” and loads your Phrase projects.</li>
         <li>Select a <strong>project</strong> and confirm <strong>target languages</strong> appear in the Composition tab.</li>
       </ol>
-      <p class="note">Complete <strong>Allow</strong> in the browser tab opened by Cult Connector. Opening Phrase from the dashboard without that OAuth flow does not connect the panel.</p>
+      <p class="note">Complete <strong>Allow</strong> in the browser tab opened by Cult Connector (on <code>cloud.memsource.com</code> or your US TMS host). Opening Phrase from the web dashboard alone does not connect the panel.</p>
+      <p class="note">If the panel later shows <strong>not connected</strong> or API errors, use <strong>Disconnect</strong> then connect again (<strong>Phrase</strong> → <strong>OK</strong> → <strong>Allow</strong>). Cult stores your Phrase session on the server for this computer only.</p>
 
       <h3>Export compositions to Phrase (with visual context)</h3>
       <ol class="steps">
@@ -253,7 +254,11 @@
         </tr>
         <tr>
           <td>Not connected / HTTP 401</td>
-          <td>Disconnect and Connect again. Confirm Cult license is active.</td>
+          <td><strong>Disconnect</strong> in the panel, then <strong>Phrase</strong> → <strong>OK</strong> → <strong>Allow</strong> again. Confirm Cult license is active.</td>
+        </tr>
+        <tr>
+          <td>Phrase session ended</td>
+          <td>Same as above — reconnect from the panel. Server uses TMS OAuth; reconnect when Phrase invalidates the access token (see <a href="TECHNICAL.html">TECHNICAL.html §2</a>).</td>
         </tr>
         <tr>
           <td>License bound to another device</td>
@@ -315,7 +320,7 @@
     </div>
 
     <footer>
-      <div class="bundle-meta">Bundle version 1.1.5 · Built (UTC): 2026-05-27</div>
+      <div class="bundle-meta">Bundle version 1.1.5 · Docs updated (UTC): 2026-05-28</div>
       Cult Extensions · Cult Connector (Adobe After Effects ↔ TMS)<br />
       © 2026 Cult Extensions. All rights reserved.<br />
       Documentation bundled with your download.

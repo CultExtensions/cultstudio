@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Bundle version 1.1.5 · Built (UTC): 2026-05-27
+Bundle version 1.1.5 · Docs updated (UTC): 2026-05-28
 --------------------------------------------------------------------------------
 
 Cult Connector — Adobe After Effects ↔ TMS
@@ -85,10 +85,12 @@ PHRASE TMS (SUMMARY)
 ---------------------
 Full steps are in README.html. In short:
 
-1. Choose Phrase in the panel → OK → Allow in the browser tab Cult Connector opens.
+1. Choose Phrase in the panel → OK → Allow on the Phrase TMS page (cloud.memsource.com).
 2. Select your Phrase project and target languages.
 3. Send Selected Compositions (strings + timeline screenshots → Job Preview in Phrase).
 4. Translate in Phrase; Import Selected in AE when ready.
+
+If the panel shows "not connected" later: Disconnect, then connect again (Phrase → OK → Allow).
 
 Troubleshooting and technical/API details: README.html and TECHNICAL.html.
 

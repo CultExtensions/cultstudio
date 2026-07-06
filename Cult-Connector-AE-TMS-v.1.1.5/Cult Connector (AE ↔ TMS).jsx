@@ -7511,12 +7511,12 @@
       if (EP_PROJECT_BROWSER_LINK) {
         var br = curlGet(EP_PROJECT_BROWSER_LINK + "?projectId=" + encodeURIComponent(String(STATE.projectId)));
         if (br.http === "200") {
-          var browserLink = extractJsonField(br.body, "url");
           var directLink = extractJsonField(br.body, "directUrl");
+          var browserLink = extractJsonField(br.body, "url");
           var orgFromBr = extractJsonField(br.body, "organization");
           if (orgFromBr) STATE.crowdinOrganization = orgFromBr;
-          if (browserLink) { openUrl(browserLink); return; }
           if (directLink) { openUrl(directLink); return; }
+          if (browserLink && browserLink.indexOf(".crowdin.com") >= 0) { openUrl(browserLink); return; }
         }
       }
       var p = null;
